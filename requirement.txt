@@ -1,0 +1,4 @@
+django
+qrcode
+whitenoise
+pillow

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        background-image: url("https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png");
+    }
+    h2{
+        color: white;
+        text-align: center;
+    }
+    .card {
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 8px 0 rgba(7, 92, 25, 0.2);
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .title {
+    color: grey;
+    font-size: 60px;
+    }
+
+    button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 60px;
+    }
+
+    a {
+    text-decoration: none;
+    font-size: 60px;
+    color: black;
+    }
+
+    button:hover, a:hover {
+    opacity: 0.7;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+</style>
+</head>
+<body>
+  {%include 'navbar.html'%}
+  
+<h2 style="text-align:center">Please check your mail for the QR code !</h2>
+
+<div class="card">
+  <img src="{{profile.face.url}}" alt="John" style="width:100%">
+  <h1>{{profile.name}}</h1>
+  <p class="title">{{profile.title}}</p>
+  <p style="font-size: 50px;">{{profile.fac}}</p>
+  <div style="margin: 24px 0;" class="content">
+    <a href="{{profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>  
+    <a href="{{profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a> 
+  </div>
+  {%if profile.verfied%}
+    <p><button style="background-color : green;">Verifed</button></p>
+  {%else%}
+    <p><button style="background-color : red;">NON</button></p>
+  {%endif%}
+  <br>
+</div>
+
+</body>
+</html>
