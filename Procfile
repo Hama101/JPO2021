@@ -1,0 +1,1 @@
+web: gunicorn Qrs.wsgi --log-file -

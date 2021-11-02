@@ -2,3 +2,4 @@ django
 qrcode
 whitenoise
 pillow
+gunicorn
