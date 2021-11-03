@@ -8,7 +8,7 @@ def get_img(CIN):
     print(BASE_DIR)
     
     print("i m here !!!!")
-    img = qrcode.make(f"http://192.168.1.20:8000/profile/{CIN}/")
+    img = qrcode.make(f"https://4a54-102-157-48-231.ngrok.io/profile/{CIN}/")
     print("1")
     img.save(BASE_DIR / 'QR_imgs' / f"{CIN}.jpg")
     print("2")
